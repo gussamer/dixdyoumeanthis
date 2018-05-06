@@ -80,7 +80,17 @@ DixdYouMeanThis.executeSfdx = function executeSfdx(command){
 }
 
 DixdYouMeanThis.handleException = function handleException(ex){
-
+  //parse error
+  //if not bad command
+  //  print pretty error
+  //  print raw error
+  //  ?switch to return json error or only return json no pretty
+  //if bad command
+  //  print your command is not recognize
+  //  print your command
+  //  print dixd you mean this?
+  //  parse output of process for sfdx --help
+  //  search command list for matching words to commands 
 }
 
 DixdYouMeanThis.run = function run(args){

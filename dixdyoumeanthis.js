@@ -66,7 +66,10 @@ DixdYouMeanThis.spinnerStop = function spinnerStop(){
 
 DixdYouMeanThis.sfdxCallback = function sfdxCallback(error,stdout,stderr){
   this.spinnerStop.call(this)
-  if(error){
+  if(error) console.log(error)
+  if(stderr) console.log(stderr)
+  if(stdout) console.log(stdout)
+  /*if(error){
     console.log(error)
     Object.keys(error).forEach(function errorKeys(key,index){
       console.log(index+' : '+key)
@@ -78,8 +81,8 @@ DixdYouMeanThis.sfdxCallback = function sfdxCallback(error,stdout,stderr){
     /*Object.keys(stderr).forEach(function errorKeys(key,index){
       console.log(index+' : '+key)
       console.log(error[key])
-    })*/
-  }
+    })
+}*/
 }
 
 DixdYouMeanThis.executeSfdx = function executeSfdx(command){

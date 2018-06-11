@@ -86,7 +86,7 @@ DixdYouMeanThis.sfdxCallback = function sfdxCallback(error,stdout,stderr){
 }
 
 DixdYouMeanThis.executeSfdx = function executeSfdx(command){
-  this.spinnerStart.call(this)
+  this.spinnerStop.call(this)
   var exec = require('child_process').exec
   var sfdxProcess = exec(command)
   sfdxProcess.stdout.pipe(process.stdout)
@@ -111,6 +111,7 @@ DixdYouMeanThis.handleException = function handleException(ex){
 
 DixdYouMeanThis.run = function run(args){
   try{
+    this.spinnerStart.call(this)
     var parsedArgs = this.parseArgs.call(this,args)
     this.command = this.formatSfdxCommand.call(this,parsedArgs.commands,parsedArgs.dxArgs)
     this.executeSfdx.call(this,this.command)

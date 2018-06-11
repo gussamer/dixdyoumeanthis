@@ -87,8 +87,11 @@ DixdYouMeanThis.sfdxCallback = function sfdxCallback(error,stdout,stderr){
 
 DixdYouMeanThis.executeSfdx = function executeSfdx(command){
   this.spinnerStart.call(this)
-  const { exec } = require('child_process')
-  exec(command,this.sfdxCallback.bind(this))
+  var exec = require('child_process').exec
+  var sfdxProcess = exec(command)
+  sfdxProcess.stdout.pipe(process.stdout)
+  //const { exec } = require('child_process')
+  //exec(command,this.sfdxCallback.bind(this))
 }
 
 DixdYouMeanThis.handleException = function handleException(ex){

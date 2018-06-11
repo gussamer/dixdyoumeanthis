@@ -90,6 +90,7 @@ DixdYouMeanThis.executeSfdx = function executeSfdx(command){
   var exec = require('child_process').exec
   var sfdxProcess = exec(command)
   sfdxProcess.stdout.pipe(process.stdout)
+  sfdxProcess.on('exit',this.sfdxCallback.bind(this))
   //const { exec } = require('child_process')
   //exec(command,this.sfdxCallback.bind(this))
 }

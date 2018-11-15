@@ -89,7 +89,8 @@ DixdYouMeanThis.executeSfdx = function executeSfdx(command){
   this.spinnerStop.call(this)
   var exec = require('child_process').exec
   var sfdxProcess = exec(command)
-  sfdxProcess.stdout.pipe(process.stdout)
+  sfdxProcess.stdout.pipe(process.stdout)  
+  sfdxProcess.stderr.pipe(process.stderr)
   sfdxProcess.on('exit',this.sfdxCallback.bind(this))
   //const { exec } = require('child_process')
   //exec(command,this.sfdxCallback.bind(this))

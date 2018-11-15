@@ -1,0 +1,27 @@
+{
+  "name": "dixdyoumeanthis",
+  "version": "1.0.0",
+  "description": "a salesforce cli wrapper because I hate the colons",
+  "main": "dixdyoumeanthis.js",
+  "preferGlobal": true,
+  "bin": {
+    "dx": "./dixdyoumeanthis.js"
+  },
+  "scripts": {
+    "test": "dx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gussamer/dixdyoumeanthis.git"
+  },
+  "keywords": [
+    "salesforce",
+    "cli"
+  ],
+  "author": "Angus Alves",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gussamer/dixdyoumeanthis/issues"
+  },
+  "homepage": "https://github.com/gussamer/dixdyoumeanthis#readme"
+}

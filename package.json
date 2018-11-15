@@ -1,5 +1,5 @@
 {
-  "name": "@gussamer/dixdyoumeanthis",
+  "name": "dixdyoumeanthis",
   "version": "1.0.0",
   "description": "a salesforce cli wrapper because I hate the colons",
   "main": "dixdyoumeanthis.js",
